@@ -1,0 +1,29 @@
+<!-- /views/paper.erb -->
+
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Paper play</title>
+</head>
+
+<body>
+  <h1>Let's see the results!</h1>
+
+  <div>
+    <h3>We played paper!</h3>
+    <h3>They played <%= @pc_move %>!</h3>
+    <% if @pc_move == "scissors"%>
+      <h2 class="lose">We lost!</h2>
+    <% elsif @pc_move == "paper"%>
+      <h2 class>We tied!</h2>
+    <% elsif @pc_move == "rock"%>
+      <h2 class="win">We won!</h2>
+    <% end %>
+  </div>
+
+  <div class="home">
+    <div><a href="/">Rules</a></div>
+  </div>
+</body>
+</html>
